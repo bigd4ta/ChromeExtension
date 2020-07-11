@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Herrera Highlight",
+    "description": "Highlights matches on the current page",
+    "version": "0.1",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Herrera Highlight"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "styles/content.css"
+            ],
+            "js": [
+                "scripts/mark.min.js",
+                "scripts/content.js"
+            ],
+            "all_frames": false
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [
+        "styles/content.css"
+    ]
+}
