@@ -24,10 +24,7 @@
         }
     ],
     "permissions": [
-        "tabs",
-        "activeTab",
-        "http://*/*",
-        "https://*/*"
+        "activeTab"
     ],
     "web_accessible_resources": [
         "styles/content.css"
