@@ -6,3 +6,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+var input = document.getElementById("terms");
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("search").click();
+    }
+});
