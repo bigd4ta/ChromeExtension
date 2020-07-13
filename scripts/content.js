@@ -5,3 +5,8 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
         context.mark(message.terms.split(" "))
     }
 })
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    if (message === "ping") {
+        sendResponse("pong")
+    }
+})

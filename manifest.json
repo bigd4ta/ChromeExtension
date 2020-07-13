@@ -7,22 +7,6 @@
         "default_popup": "popup.html",
         "default_title": "Herrera Highlight"
     },
-    "content_scripts": [
-        {
-            "run_at": "document_end",
-            "matches": [
-                "<all_urls>"
-            ],
-            "css": [
-                "styles/content.css"
-            ],
-            "js": [
-                "scripts/mark.min.js",
-                "scripts/content.js"
-            ],
-            "all_frames": false
-        }
-    ],
     "permissions": [
         "activeTab"
     ],
