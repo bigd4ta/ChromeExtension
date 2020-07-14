@@ -2,7 +2,7 @@ var context = new Mark(document.querySelector("body"))
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
     if (message.type === "highlight" && message.terms != "") {
         context.unmark();
-        context.mark(message.terms.split(" "))
+        context.mark(message.terms.split(" "), {"className": "herreraHighlight"})
     }
 })
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
